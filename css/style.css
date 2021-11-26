@@ -1,0 +1,99 @@
+/* body {
+    background-image: linear-gradient(to right, red, green);
+    margin: 0;
+    background-color: red;
+}
+
+.box {
+    height: 50vh;
+    box-sizing: border-box;
+    background: #c31432;
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);
+    background: linear-gradient(to right, #240b36, #c31432);
+    color: white;
+}
+@media screen and (max-width: 900px) {
+    body {
+        background-color: lightpink;
+    }
+}
+@media screen and (max-width: 600px) {
+    body {
+        background-color: lightsalmon;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        background-color: lightgreen;
+    }
+} */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    flex: 25%;
+    border: 2px solid red;
+    height: 300px;
+}
+
+@media screen and (max-width: 992px) and (min-width: 800px), (min-width: 1100px) {
+    body{
+        background-color: lime;
+    }
+    .topnav {
+        display: none;
+    }
+    .box {
+        flex: 50%;
+    }
+}
+
+/* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .topnav {
+        display: block;
+    }
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+    .box {
+        flex-direction: column;
+        flex: 100%;
+        margin-bottom: 20px;
+    }
+}
